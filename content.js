@@ -5,7 +5,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
   arr = Array.from(document.getElementsByTagName('*'));
   res = []
   arr.forEach(el => {
-  if (el.innerText && el.innerText.split(" ").includes('sit')) {
+  if (el.innerText && el.innerText.split(" ").includes(keywordsArray[0])) {
       res.push(el)
   }
   });
